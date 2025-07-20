@@ -26,89 +26,71 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              About Me
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A passionate technology leader who builds relationships, teams, companies, and solutions 
-              to solve real-world problems through innovation and strategic vision.
-            </p>
-          </div>
+    <section id="about" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            A passionate technology leader who builds relationships, teams, companies, and solutions 
+            to solve real-world problems through innovation and strategic vision.
+          </p>
+        </div>
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Profile Image Placeholder */}
-            <div className="relative animate-slide-up">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shadow-elegant">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-primary">MH</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Professional Photo</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Profile Content */}
-            <div className="space-y-6 animate-slide-up">
-              <h3 className="text-2xl font-semibold text-foreground">
-                Building the Future Through Technology & Leadership
-              </h3>
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-3 gap-12 items-start mb-16">
+          {/* Profile Content - Now Full Width */}
+          <div className="lg:col-span-3">
+            <h3 className="text-3xl font-bold mb-6">Building the Future Through Technology & Leadership</h3>
+            
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                With over **15 years** of experience in full-stack 
+                engineering and team management, I've had the privilege of leading transformative 
+                technology initiatives across diverse industries including Financial Services, 
+                E-commerce, and Logistics.
+              </p>
               
-              <div className="space-y-4 text-muted-foreground">
-                <p>
-                  With over <strong className="text-primary">15 years</strong> of experience in full-stack 
-                  engineering and team management, I've had the privilege of leading transformative 
-                  technology initiatives across diverse industries including Financial Services, 
-                  E-commerce, and Logistics.
-                </p>
-                
-                <p>
-                  My journey spans from individual contributor to engineering leadership roles at 
-                  prestigious organizations like <strong className="text-primary">Ernst & Young</strong>, 
-                  <strong className="text-primary"> Amazon</strong>, 
-                  <strong className="text-primary"> Delhivery</strong>, and 
-                  <strong className="text-primary"> Western Union</strong>.
-                </p>
-                
-                <p>
-                  I specialize in architecting scalable solutions, building high-performing teams, 
-                  and driving digital transformation while maintaining a strong focus on 
-                  operational excellence and innovation.
-                </p>
-              </div>
+              <p>
+                My journey spans from individual contributor to engineering leadership roles at 
+                prestigious organizations like **Ernst & Young**, 
+                **Amazon**, 
+                **Delhivery**, and 
+                **Western Union**.
+              </p>
+              
+              <p>
+                I specialize in architecting scalable solutions, building high-performing teams, 
+                and driving digital transformation while maintaining a strong focus on 
+                operational excellence and innovation.
+              </p>
+            </div>
 
-              {/* Education & Certifications */}
-              <div className="space-y-2">
-                <h4 className="font-semibold text-foreground">Education & Certifications</h4>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>• Executive Diploma in Machine Learning & AI (IIIT-B)</li>
-                  <li>• BE Computer Science Engineering (78.69%, Ranked 3rd)</li>
-                  <li>• MBA from ICFAI, AWS Solution Architect, PMP Certified</li>
-                </ul>
-              </div>
+            {/* Education & Certifications */}
+            <div className="mt-8">
+              <h4 className="text-2xl font-semibold mb-4">Education & Certifications</h4>
+              <ul className="text-muted-foreground space-y-2">
+                <li>• Executive Diploma in Machine Learning & AI (IIIT-B)</li>
+                <li>• BE Computer Science Engineering (78.69%, Ranked 3rd)</li>
+                <li>• MBA from ICFAI, AWS Solution Architect, PMP Certified</li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          {/* Key Highlights */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in">
-            {highlights.map((highlight, index) => (
-              <Card key={index} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 bg-background/50 backdrop-blur-sm">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <highlight.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h4 className="font-semibold text-foreground mb-2">{highlight.title}</h4>
-                  <p className="text-sm text-muted-foreground">{highlight.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Key Highlights */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {highlights.map((highlight, index) => (
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                  <highlight.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h4 className="text-xl font-semibold mb-2">{highlight.title}</h4>
+                <p className="text-muted-foreground">{highlight.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
