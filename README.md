@@ -10,7 +10,10 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0159ecf3-6a63-44c4-8c28-d4bfe15e1a86) and start prompting.
+Simply visit the 
+- [Live site](https://mudassar-hakim-site.lovable.app/)
+- [Lovable Project](https://lovable.dev/projects/0159ecf3-6a63-44c4-8c28-d4bfe15e1a86) and start prompting.
+
 
 Changes made via Lovable will be committed automatically to this repo.
 
