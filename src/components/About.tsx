@@ -45,7 +45,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                With over **15 years** of experience in full-stack 
+                With over 15 years of experience in full-stack 
                 engineering and team management, I've had the privilege of leading transformative 
                 technology initiatives across diverse industries including Financial Services, 
                 E-commerce, and Logistics.
@@ -53,10 +53,10 @@ const About = () => {
               
               <p>
                 My journey spans from individual contributor to engineering leadership roles at 
-                prestigious organizations like **Ernst & Young**, 
-                **Amazon**, 
-                **Delhivery**, and 
-                **Western Union**.
+                prestigious organizations like Ernst & Young, 
+                Amazon, 
+                Delhivery, and 
+                Western Union.
               </p>
               
               <p>
