@@ -64,6 +64,14 @@ const About = () => {
                 and driving digital transformation while maintaining a strong focus on 
                 operational excellence and innovation.
               </p>
+              
+              <p>
+                As a thought leader in the tech community, I actively share my knowledge through 
+                technical publications on Medium, covering topics from AI/ML and system design 
+                to prompt engineering. My hands-on projects span from intelligent chatbots and 
+                medical AI systems to data science applications, demonstrating practical expertise 
+                across the full spectrum of modern software development.
+              </p>
             </div>
 
             {/* Education & Certifications */}
