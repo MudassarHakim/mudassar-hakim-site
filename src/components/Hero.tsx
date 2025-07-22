@@ -70,9 +70,9 @@ const Hero = () => {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.gle/p7yw6Q7AMdGhLuCE6" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
-                Download Resume
+                Request Resume
               </a>
             </Button>
           </div>

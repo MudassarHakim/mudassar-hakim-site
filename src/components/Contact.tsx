@@ -158,74 +158,30 @@ const Contact = () => {
             <div className="lg:col-span-2 animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <Card className="shadow-elegant">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Send a Message</CardTitle>
+                  <CardTitle className="text-2xl">Contact Me</CardTitle>
                   <p className="text-muted-foreground">
-                    Whether you have a question, opportunity, or just want to say hello, 
-                    I'd be happy to hear from you.
+                    Ready to discuss opportunities, collaborations, or just connect? 
+                    I'd love to hear from you.
                   </p>
                 </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-foreground">
-                          Name *
-                        </label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => setFormData({...formData, name: e.target.value})}
-                          placeholder="Your full name"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-foreground">
-                          Email *
-                        </label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          placeholder="your.email@example.com"
-                          required
-                        />
-                      </div>
+                <CardContent className="text-center py-12">
+                  <div className="space-y-6">
+                    <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                      <Mail className="h-10 w-10 text-primary" />
                     </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium text-foreground">
-                        Subject *
-                      </label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                        placeholder="What's this about?"
-                        required
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-foreground">
-                        Message *
-                      </label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData({...formData, message: e.target.value})}
-                        placeholder="Tell me more about your project, opportunity, or question..."
-                        rows={6}
-                        required
-                      />
-                    </div>
-                    
-                    <Button type="submit" size="lg" className="w-full group shadow-elegant">
-                      Send Message
-                      <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <h3 className="text-xl font-semibold text-foreground">
+                      Let's Start a Conversation
+                    </h3>
+                    <p className="text-muted-foreground max-w-md mx-auto">
+                      Click the button below to get in touch. I'll respond to your inquiry as soon as possible.
+                    </p>
+                    <Button size="lg" asChild className="shadow-elegant">
+                      <a href="https://forms.gle/p7yw6Q7AMdGhLuCE6" target="_blank" rel="noopener noreferrer">
+                        <Send className="mr-2 h-4 w-4" />
+                        Contact Me
+                      </a>
                     </Button>
-                  </form>
+                  </div>
                 </CardContent>
               </Card>
             </div>
