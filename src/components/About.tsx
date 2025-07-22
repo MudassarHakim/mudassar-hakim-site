@@ -31,10 +31,6 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A passionate technology leader who builds relationships, teams, companies, and solutions 
-            to solve real-world problems through innovation and strategic vision.
-          </p>
         </div>
 
         {/* Main Content */}
