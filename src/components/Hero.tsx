@@ -29,7 +29,7 @@ const Hero = () => {
           {/* Description */}
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Dynamic and results-driven technology leader with over <span className="text-primary font-semibold">15 years</span> of 
-            full-stack engineering experience, including impactful roles at Amazon, Ernst & Young, Delhivery, and Western Union. 
+            full-stack engineering experience, including impactful roles at <span className="text-primary font-semibold">Amazon, Ernst & Young, Delhivery, and Western Union</span>. 
             Proven track record of architecting complex, scalable technical products, leading high-performing cross-functional teams, 
             and delivering digital transformation initiatives in agile, fast-paced environments. Adept at bridging business and 
             technology, driving innovation, and consistently achieving strategic objectives across global organizations.

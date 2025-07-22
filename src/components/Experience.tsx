@@ -80,9 +80,6 @@ const Experience = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Professional Experience
-            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A track record of delivering high-impact solutions and leading engineering excellence 
               across Fortune 500 companies and innovative startups.
