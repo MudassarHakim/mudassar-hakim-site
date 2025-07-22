@@ -1,4 +1,4 @@
-import { ArrowRight, Download, MapPin } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -15,11 +15,6 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          {/* Status Badge */}
-          <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
-            <MapPin className="w-4 h-4 mr-2" />
-            Currently at Ernst & Young, Pune
-          </Badge>
 
           {/* Main Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
@@ -33,9 +28,11 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Dynamic and results-driven leader with <span className="text-primary font-semibold">15+ years</span> of 
-            full-stack engineering experience, specializing in architecting complex technical products, 
-            leading cross-functional teams, and driving digital transformation in agile environments.
+            Dynamic and results-driven technology leader with over <span className="text-primary font-semibold">15 years</span> of 
+            full-stack engineering experience, including impactful roles at Amazon, Ernst & Young, Delhivery, and Western Union. 
+            Proven track record of architecting complex, scalable technical products, leading high-performing cross-functional teams, 
+            and delivering digital transformation initiatives in agile, fast-paced environments. Adept at bridging business and 
+            technology, driving innovation, and consistently achieving strategic objectives across global organizations.
           </p>
 
           {/* Key Highlights */}
