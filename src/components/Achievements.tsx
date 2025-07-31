@@ -36,21 +36,18 @@ const Achievements = () => {
 
   const awards = [
     {
-      year: "2021",
       title: "Year-End Recognition Award",
       organization: "Western Union",
       category: "Site Leadership Team",
       description: "Recognized for exceptional leadership and contribution to organizational success"
     },
     {
-      year: "2020 & 2019",
       title: "Over and Above Award",
       organization: "Western Union",
       category: "Excellence in Delivery",
       description: "Consecutive recognition for exceeding performance expectations and delivering exceptional results"
     },
     {
-      year: "2019",
       title: "Best Mentor Award",
       organization: "Yash Technologies",
       category: "Leadership Development",
@@ -150,7 +147,6 @@ const Achievements = () => {
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                         <Award className="h-6 w-6 text-primary" />
                       </div>
-                      <Badge variant="secondary">{award.year}</Badge>
                     </div>
                     <CardTitle className="text-lg">{award.title}</CardTitle>
                     <div className="text-primary font-semibold">{award.organization}</div>

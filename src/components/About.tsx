@@ -69,8 +69,8 @@ const About = () => {
             <div className="mt-8">
               <h4 className="text-2xl font-semibold mb-4">Education & Certifications</h4>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Executive Diploma in Machine Learning & AI (IIIT-B)</li>
-                <li>• BE Computer Science Engineering (78.69%, Ranked 3rd)</li>
+                <li>• Executive Diploma in Machine Learning & Artificial Intelligence (IIIT-B)</li>
+                <li>• BE Computer Science Engineering</li>
                 <li>• MBA from ICFAI, AWS Solution Architect, PMP Certified</li>
               </ul>
             </div>
