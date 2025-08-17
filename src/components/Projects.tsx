@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Play, FileText, Brain, TrendingUp, Code, Database, MessageSquare } from 'lucide-react';
+import { ExternalLink, Github, Play, FileText, Brain, TrendingUp, Code, Database, MessageSquare, HelpCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -94,13 +94,34 @@ const Projects = () => {
       tags: ["System Design", "Architecture", "Scalability", "Engineering"]
     },
     {
-      title: "POS Tagging Explained",
-      subtitle: "Simple Transition and Emission Matrix Example",
-      description: "Detailed explanation of Part-of-Speech tagging using Hidden Markov Models with practical transition and emission matrix examples.",
-      readTime: "3 min read", 
-      date: "Apr 26, 2025",
-      url: "https://medium.com/@mudassar.hakim/pos-tagging-simple-transition-and-emission-matrix-example-dc9d634b9edf",
-      tags: ["NLP", "Machine Learning", "POS Tagging", "HMM"]
+      title: "Prompting, Fine-tuning, or RAG?",
+      subtitle: "A Practical Guide to Smarter AI Customization",
+      description: "Comprehensive guide to choosing the right AI customization approach for your specific use case, comparing prompting, fine-tuning, and RAG strategies.",
+      readTime: "5 min read", 
+      date: "Dec 12, 2024",
+      url: "https://medium.com/@mudassar.hakim/prompting-fine-tuning-or-rag-a-practical-guide-to-smarter-ai-customization-f1ed479534f3",
+      tags: ["AI", "RAG", "Fine-tuning", "Prompting"]
+    }
+  ];
+
+  const stackOverflowPosts = [
+    {
+      title: "Spring Security Method Security Annotation @Secured is Not Working",
+      description: "Comprehensive solution for configuring Spring Security method-level security with @Secured annotations",
+      url: "https://stackoverflow.com/questions/31186826/spring-security-method-security-annotation-secured-is-not-working-java-con/31187395#31187395",
+      tags: ["Spring Security", "Java", "Configuration"]
+    },
+    {
+      title: "How to View Memory Usage in Eclipse (Beginner)",
+      description: "Step-by-step guide to monitor and analyze memory usage in Eclipse IDE for better development experience",
+      url: "https://stackoverflow.com/questions/31254187/how-to-view-memory-usage-in-eclipse-beginner/31255323#31255323",
+      tags: ["Eclipse", "Memory Management", "IDE"]
+    },
+    {
+      title: "Component Scan Not Scanning Sub Packages",
+      description: "Solution for Spring Framework component scanning issues when dealing with nested package structures",
+      url: "https://stackoverflow.com/questions/37915751/component-scan-not-scanning-sub-packages/37916238#37916238",
+      tags: ["Spring Framework", "Component Scan", "Package Structure"]
     }
   ];
 
@@ -270,6 +291,69 @@ const Projects = () => {
                       <a href={article.url} target="_blank" rel="noopener noreferrer">
                         <FileText className="h-4 w-4 mr-2" />
                         Read Article
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* StackOverflow Contributions */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+            <HelpCircle className="h-6 w-6" />
+            StackOverflow Contributions
+          </h3>
+          <div className="mb-6">
+            <Card className="bg-gradient-to-r from-orange-500/5 to-orange-600/5 border-orange-500/20">
+              <CardContent className="py-4">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-orange-500/10">
+                    <HelpCircle className="h-8 w-8 text-orange-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold">Active Community Contributor</h4>
+                    <p className="text-muted-foreground">Helping developers solve complex technical challenges</p>
+                  </div>
+                  <div className="ml-auto">
+                    <Button variant="outline" asChild>
+                      <a href="https://stackoverflow.com/users/1685051/mudassar" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Profile
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            {stackOverflowPosts.map((post, index) => (
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-orange-500/20">
+                <CardHeader>
+                  <CardTitle className="text-lg group-hover:text-orange-500 transition-colors line-clamp-2">
+                    {post.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm leading-relaxed">
+                    {post.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-1">
+                      {post.tags.map((tag, tagIndex) => (
+                        <Badge key={tagIndex} variant="outline" className="text-xs border-orange-500/30">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    
+                    <Button variant="outline" size="sm" asChild className="w-full hover:bg-orange-500/5">
+                      <a href={post.url} target="_blank" rel="noopener noreferrer">
+                        <HelpCircle className="h-4 w-4 mr-2" />
+                        View Answer
                       </a>
                     </Button>
                   </div>
