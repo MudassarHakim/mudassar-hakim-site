@@ -46,16 +46,44 @@ const Projects = () => {
         "Statistical significance testing",
         "Business insights and recommendations"
       ]
+    },
+    {
+      title: "Multi-Agent LLM Discussion System",
+      description: "An advanced multi-agent system facilitating intelligent discussions between multiple AI agents with different roles and perspectives. Features dynamic conversation flow and collaborative problem-solving capabilities.",
+      tech: ["LangChain", "Multi-Agent Systems", "LLM", "Python", "AI Orchestration", "Conversation Management"],
+      category: "AI/ML",
+      icon: MessageSquare,
+      github: "https://github.com/MudassarHakim/Multi-Agent-LLM-Discussion",
+      highlights: [
+        "Multi-agent conversation orchestration",
+        "Role-based AI agent specialization", 
+        "Dynamic discussion flow management",
+        "Collaborative AI problem-solving framework"
+      ]
     }
   ];
 
   const streamlitApps = [
     {
+      title: "Multi-Agent AI System",
+      description: "A sophisticated multi-agent AI system built with LangChain, Groq, and CrewAI for collaborative problem-solving and intelligent task orchestration across multiple specialized agents.",
+      tech: ["LangChain", "Groq", "CrewAI", "Multi-Agent AI", "Python"],
+      url: "https://multi-agent-langchain-groq-crewai-mudassar.lovable.app",
+      featured: true,
+      views: "15 views"
+    },
+    {
+      title: "PayFlow Unified Kit",
+      description: "A comprehensive payment processing solution that unifies multiple payment methods and providers into a single, streamlined interface for seamless transaction management.",
+      tech: ["Payment Processing", "API Integration", "React", "TypeScript"],
+      url: "https://payflow-unified-kit.lovable.app/",
+      views: "12 views"
+    },
+    {
       title: "STAR Answer Formatter & Evaluator",
       description: "An AI-powered tool that helps professionals format and evaluate behavioral interview answers using the STAR (Situation, Task, Action, Result) method.",
       tech: ["Streamlit", "NLP", "GPT Integration", "Python"],
       url: "https://behavioral-interview-answer-mudasarhakim.streamlit.app/",
-      featured: true,
       views: "9 views"
     },
     {
@@ -83,6 +111,15 @@ const Projects = () => {
       date: "Jun 8, 2025",
       url: "https://medium.com/@mudassar.hakim/mastering-prompt-engineering-a-guide-to-system-user-and-assistant-roles-in-openai-api-28fe5fbf1d81",
       tags: ["AI", "Prompt Engineering", "OpenAI", "GPT"]
+    },
+    {
+      title: "Building a Multi-Agent AI System",
+      subtitle: "A Complete Guide to Secure Frontend-Backend Integration",
+      description: "Comprehensive tutorial on building secure multi-agent AI systems with proper frontend-backend integration patterns, security best practices, and scalable architecture design.",
+      readTime: "8 min read",
+      date: "Nov 15, 2024",
+      url: "https://medium.com/@mudassar.hakim/building-a-multi-agent-ai-system-a-complete-guide-to-secure-frontend-backend-integration-with-26a5a3aa0236",
+      tags: ["Multi-Agent AI", "System Architecture", "Security", "Integration"]
     },
     {
       title: "Mastering System Design",
