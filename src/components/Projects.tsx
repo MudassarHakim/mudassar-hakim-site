@@ -76,7 +76,7 @@ const Projects = () => {
       title: "PayFlow Unified Kit",
       description: "A comprehensive payment processing solution that unifies multiple payment methods and providers into a single, streamlined interface for seamless transaction management.",
       tech: ["Payment Processing", "API Integration", "React", "TypeScript"],
-      url: "https://payflow-unified-kit.lovable.app/",
+      url: "https://payflow-unified-kit-mudassar-hakim.netlify.app/",
       views: "12 views"
     },
     {
