@@ -122,6 +122,15 @@ const Projects = () => {
       tags: ["Multi-Agent AI", "System Architecture", "Security", "Integration"]
     },
     {
+      title: "Why Your \"Nano Banana\" is Awesome, But Stable Diffusion is a Whole Different Beast",
+      subtitle: "Understanding the Magic Behind Stable Diffusion's Image Generation",
+      description: "Deep dive into Stable Diffusion's architecture, comparing its diffusion-based approach with other image generation models and exploring the core components that make it tick.",
+      readTime: "8 min read",
+      date: "Sep 14, 2025",
+      url: "https://medium.com/@mudassar.hakim/why-your-nano-banana-is-awesome-but-stable-diffusion-is-a-whole-different-beast-69ef1aef4387",
+      tags: ["AI", "Stable Diffusion", "Image Generation", "Deep Learning"]
+    },
+    {
       title: "Mastering System Design",
       subtitle: "10 Key Pillars Every Engineer Should Know",
       description: "Essential system design principles and architectural patterns that every software engineer should master for building scalable applications.",
