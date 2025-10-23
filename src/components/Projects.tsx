@@ -147,6 +147,15 @@ const Projects = () => {
       date: "Dec 12, 2024",
       url: "https://medium.com/@mudassar.hakim/prompting-fine-tuning-or-rag-a-practical-guide-to-smarter-ai-customization-f1ed479534f3",
       tags: ["AI", "RAG", "Fine-tuning", "Prompting"]
+    },
+    {
+      title: "Building a Movie Recommendation System with Content-Based Filtering",
+      subtitle: "Step-by-Step Guide to Content Filtering Implementation",
+      description: "Detailed walkthrough of building a content-based movie recommendation system using Python, covering data processing, feature extraction, and similarity computation.",
+      readTime: "5 min read",
+      date: "Oct 13, 2025",
+      url: "https://medium.com/@mudassar.hakim/movie-recommendation-system-content-filtering-10bf2d09459e",
+      tags: ["Machine Learning", "Recommendation Systems", "Python", "Content Filtering"]
     }
   ];
 
