@@ -99,6 +99,13 @@ const Projects = () => {
       tech: ["Streamlit", "AI Chatbot", "Mental Health", "Python"],
       url: "https://calmbot-app.streamlit.app/",
       views: "4 views"
+    },
+    {
+      title: "Arwa Lumiere",
+      description: "An elegant web application showcasing creative design and modern web technologies.",
+      tech: ["React", "TypeScript", "Tailwind CSS"],
+      url: "https://arwa-lumiere.lovable.app/",
+      views: "3 views"
     }
   ];
 
