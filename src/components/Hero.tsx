@@ -28,7 +28,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Dynamic and results-driven technology leader with over <span className="text-primary font-semibold">15 years</span> of 
+            Dynamic and results-driven technology leader with over <span className="text-primary font-semibold">17 years</span> of 
             full-stack engineering experience, including impactful roles at <span className="text-primary font-semibold">Amazon, Ernst & Young, Delhivery, and Western Union</span>. 
             Proven track record of architecting complex, scalable technical products, leading high-performing cross-functional teams, 
             and delivering digital transformation initiatives in agile, fast-paced environments. Adept at bridging business and 
@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Key Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary">15+</div>
+              <div className="text-2xl font-bold text-primary">17+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
