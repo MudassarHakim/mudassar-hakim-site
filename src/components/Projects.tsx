@@ -200,10 +200,18 @@ const Projects = () => {
 
         {/* GitHub Projects */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <Github className="h-6 w-6" />
-            Open Source Projects
-          </h3>
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold flex items-center gap-2">
+              <Github className="h-6 w-6" />
+              Open Source Projects
+            </h3>
+            <Button variant="outline" size="sm" asChild>
+              <a href="https://github.com/MudassarHakim?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4 mr-2" />
+                View More
+              </a>
+            </Button>
+          </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
@@ -314,10 +322,18 @@ const Projects = () => {
 
         {/* Medium Articles */}
         <div>
-          <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <FileText className="h-6 w-6" />
-            Technical Publications
-          </h3>
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl font-bold flex items-center gap-2">
+              <FileText className="h-6 w-6" />
+              Technical Publications
+            </h3>
+            <Button variant="outline" size="sm" asChild>
+              <a href="https://medium.com/@mudassar.hakim" target="_blank" rel="noopener noreferrer">
+                <FileText className="h-4 w-4 mr-2" />
+                View More
+              </a>
+            </Button>
+          </div>
           <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {mediumArticles.map((article, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">

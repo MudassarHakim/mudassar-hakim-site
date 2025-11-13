@@ -21,7 +21,7 @@ const About = () => {
     {
       icon: TrendingUp,
       title: "Innovation Driver",
-      description: "Built AI chatbots, implemented CQRS architecture, and led digital transformation"
+      description: "Built Agentic AI, Multi Agent model, implemented CQRS architecture, and led digital transformation"
     }
   ];
 
@@ -36,7 +36,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                With over 15 years of experience in full-stack 
+                With over 17 years of experience in full-stack 
                 engineering and team management, I've had the privilege of leading transformative 
                 technology initiatives across diverse industries including Financial Services, 
                 E-commerce, and Logistics.
@@ -77,20 +77,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Key Highlights */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((highlight, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                  <highlight.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h4 className="text-xl font-semibold mb-2">{highlight.title}</h4>
-                <p className="text-muted-foreground">{highlight.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
     </section>
   );

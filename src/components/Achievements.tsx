@@ -57,7 +57,7 @@ const Achievements = () => {
 
   const keyImpacts = [
     {
-      metric: "15+",
+      metric: "17+",
       label: "Years of Leadership",
       description: "Engineering management across multiple Fortune 500 companies"
     },
