@@ -67,7 +67,7 @@ const Projects = () => {
     {
       title: "RAG QA Project",
       description: "An intelligent Retrieval-Augmented Generation (RAG) question-answering system that combines document retrieval with AI-powered responses for accurate and context-aware answers.",
-      tech: ["RAG", "LLM", "Vector Database", "Python", "NLP"],
+      tech: ["RAG", "LLM", "Vector Database", "RAGAS", "Qdrant", "LangSmith", "NLP"],
       url: "https://rag-qa-project-t7pa.onrender.com/",
       featured: true,
       views: "20 views"
