@@ -65,6 +65,14 @@ const Projects = () => {
 
   const streamlitApps = [
     {
+      title: "RAG QA Project",
+      description: "An intelligent Retrieval-Augmented Generation (RAG) question-answering system that combines document retrieval with AI-powered responses for accurate and context-aware answers.",
+      tech: ["RAG", "LLM", "Vector Database", "Python", "NLP"],
+      url: "https://rag-qa-project-t7pa.onrender.com/",
+      featured: true,
+      views: "20 views"
+    },
+    {
       title: "Multi-Agent AI System",
       description: "A sophisticated multi-agent AI system built with LangChain, Groq, and CrewAI for collaborative problem-solving and intelligent task orchestration across multiple specialized agents.",
       tech: ["LangChain", "Groq", "CrewAI", "Multi-Agent AI", "Python"],
