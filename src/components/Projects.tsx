@@ -281,7 +281,7 @@ const Projects = () => {
         </div>
 
         {/* Streamlit Applications */}
-        <div className="mb-16">
+        <div id="applications" className="mb-16 scroll-mt-24">
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
             <Play className="h-6 w-6" />
             Live Applications
@@ -329,7 +329,7 @@ const Projects = () => {
         </div>
 
         {/* Medium Articles */}
-        <div>
+        <div id="publications" className="scroll-mt-24">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-2xl font-bold flex items-center gap-2">
               <FileText className="h-6 w-6" />
