@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+
+  // Projects Carousel
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     containScroll: 'trimSnaps',
@@ -252,11 +254,74 @@ const Projects = () => {
       readTime: "5 min read",
       date: "Jun 8, 2025",
       url: "https://medium.com/@mudassar.hakim/mastering-prompt-engineering-a-guide-to-system-user-and-assistant-roles-in-openai-api-28fe5fbf1d81",
-      tags: ["AI", "Prompt Engineering", "OpenAI"]
+      tags: ["AI", "Prompting", "OpenAI"]
+    },
+    {
+      title: "Why Re-Rankers Decide RAG Quality",
+      subtitle: "Choosing Between Open-Source, Cohere, and Voyage",
+      description: "Exploring the critical role of re-rankers in RAG and comparing top industry solutions.",
+      readTime: "7 min read",
+      date: "Dec 12, 2025",
+      url: "https://medium.com/@mudassar.hakim/why-re-rankers-decide-rag-quality-choosing-between-open-source-cohere-and-voyage-1536fe4ca808",
+      tags: ["RAG", "Re-Ranking", "AI"]
+    },
+    {
+      title: "Inside the RAG Retrieval Pipeline",
+      subtitle: "Bi-Encoders, Cross-Encoders, and Two-Stage Retrieval",
+      description: "Deep dive into the architecture of modern retrieval pipelines for LLM applications.",
+      readTime: "9 min read",
+      date: "Dec 10, 2025",
+      url: "https://medium.com/@mudassar.hakim/inside-the-rag-retrieval-pipeline-bi-encoders-cross-encoders-re-rankers-two-stage-retrieval-c391bea7eae4",
+      tags: ["RAG", "Architecture", "NLP"]
+    },
+    {
+      title: "Designing Retrieval in RAG",
+      subtitle: "Dense, Sparse, and the RRF Merge Layer",
+      description: "A technical guide to implementing hybrid search with Reciprocal Rank Fusion.",
+      readTime: "8 min read",
+      date: "Dec 5, 2025",
+      url: "https://medium.com/@mudassar.hakim/designing-retrieval-in-rag-dense-sparse-and-the-rrf-merge-layer-bc176207de50",
+      tags: ["RAG", "Search", "Hybrid"]
+    },
+    {
+      title: "Retrieval Is the Bottleneck",
+      subtitle: "HyDE, Query Expansion, and Multi-Query RAG",
+      description: "Explaining production techniques to solve retrieval issues in RAG systems.",
+      readTime: "10 min read",
+      date: "Nov 28, 2025",
+      url: "https://medium.com/@mudassar.hakim/retrieval-is-the-bottleneck-hyde-query-expansion-and-multi-query-rag-explained-for-production-c1842bed7f8a",
+      tags: ["RAG", "Production", "LLM"]
+    },
+    {
+      title: "Late Chunking in RAG",
+      subtitle: "Stop Cutting Text — Start Cutting Meaning",
+      description: "Introduction to late chunking techniques for maintaining semantic context in RAG.",
+      readTime: "6 min read",
+      date: "Nov 20, 2025",
+      url: "https://medium.com/@mudassar.hakim/late-chunking-in-rag-stop-cutting-text-start-cutting-meaning-ad1f859b4473",
+      tags: ["RAG", "Context", "NLP"]
+    },
+    {
+      title: "Decoding the RAG Paper",
+      subtitle: "Why Hybrid Memory Matters for Modern NLP",
+      description: "A fundamental review of the original RAG paper and its impact on AI systems.",
+      readTime: "8 min read",
+      date: "Nov 12, 2025",
+      url: "https://medium.com/@mudassar.hakim/decoding-the-rag-paper-why-hybrid-memory-matters-for-modern-nlp-systems-e013aba94e49",
+      tags: ["RAG", "Research", "NLP"]
+    },
+    {
+      title: "Machine Learning Foundations",
+      subtitle: "Random Variables and Probability Explained",
+      description: "A simplified guide to the mathematical foundations of machine learning.",
+      readTime: "12 min read",
+      date: "Oct 25, 2025",
+      url: "https://medium.com/@mudassar.hakim/a-simplified-foundation-for-machine-learning-understanding-random-variables-and-probability-b5b7eee027e0",
+      tags: ["ML", "Math", "Foundations"]
     },
     {
       title: "Building a Multi-Agent AI System",
-      subtitle: "A Complete Guide to Secure Frontend-Backend Integration",
+      subtitle: "Secure Frontend-Backend Integration",
       description: "Tutorial on building secure multi-agent AI systems with proper integration patterns.",
       readTime: "8 min read",
       date: "Nov 15, 2024",
@@ -264,8 +329,8 @@ const Projects = () => {
       tags: ["Multi-Agent AI", "Architecture", "Security"]
     },
     {
-      title: "Why Your \"Nano Banana\" is Awesome, But Stable Diffusion is a Beast",
-      subtitle: "Understanding Magic Behind Stable Diffusion's Image Generation",
+      title: "Stable Diffusion Explained",
+      subtitle: "The Magic Behind Image Generation",
       description: "Deep dive into Stable Diffusion's architecture and image generation capabilities.",
       readTime: "8 min read",
       date: "Sep 14, 2025",
@@ -306,6 +371,39 @@ const Projects = () => {
     }
     return pairs;
   }, [filteredProjects]);
+
+  const pairedArticles = useMemo(() => {
+    const pairs = [];
+    for (let i = 0; i < mediumArticles.length; i += 2) {
+      pairs.push(mediumArticles.slice(i, i + 2));
+    }
+    return pairs;
+  }, [mediumArticles]);
+
+  // Publications Carousel
+  const [pubEmblaRef, pubEmblaApi] = useEmblaCarousel({
+    align: 'start',
+    containScroll: 'trimSnaps',
+    dragFree: false,
+    slidesToScroll: 1
+  });
+
+  const [pubPrevBtnEnabled, setPubPrevBtnEnabled] = useState(false);
+  const [pubNextBtnEnabled, setPubNextBtnEnabled] = useState(false);
+  const [pubSelectedIndex, setPubSelectedIndex] = useState(0);
+
+  const onPubSelect = useCallback((api: any) => {
+    setPubSelectedIndex(api.selectedScrollSnap());
+    setPubPrevBtnEnabled(api.canScrollPrev());
+    setPubNextBtnEnabled(api.canScrollNext());
+  }, []);
+
+  useEffect(() => {
+    if (!pubEmblaApi) return;
+    onPubSelect(pubEmblaApi);
+    pubEmblaApi.on('select', onPubSelect);
+    pubEmblaApi.on('reInit', onPubSelect);
+  }, [pubEmblaApi, onPubSelect]);
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
@@ -432,51 +530,101 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Technical Publications */}
-        {/* ... (rest of the component remains same) ... */}
+        {/* Technical Publications Section */}
         <div id="publications" className="mb-24 scroll-mt-24">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-bold flex items-center gap-2">
-              <FileText className="h-6 w-6 text-primary" />
-              Technical Publications
-            </h3>
-            <Button variant="outline" size="sm" asChild>
+          <div className="flex items-center justify-between mb-12">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-primary/10">
+                <FileText className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-3xl font-bold">Technical Publications</h3>
+            </div>
+            <Button variant="outline" size="sm" asChild className="hidden sm:flex">
               <a href="https://medium.com/@mudassar.hakim" target="_blank" rel="noopener noreferrer">
                 View All on Medium
               </a>
             </Button>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mediumArticles.map((article, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 bg-background/50 backdrop-blur-sm overflow-hidden flex flex-col">
-                <CardHeader className="flex-1">
-                  <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-2">
-                    {article.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm font-semibold text-foreground/80 my-2">
-                    {article.subtitle}
-                  </CardDescription>
-                  <CardDescription className="text-xs line-clamp-3">
-                    {article.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between text-[10px] text-muted-foreground mb-4 uppercase tracking-wider font-bold">
-                    <span>{article.readTime}</span>
-                    <span>{article.date}</span>
+
+          <div className="relative px-4 sm:px-10">
+            <div className="overflow-hidden" ref={pubEmblaRef}>
+              <div className="flex">
+                {pairedArticles.map((pair, slideIndex) => (
+                  <div key={slideIndex} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] min-w-0 pl-4">
+                    <div className="flex flex-col gap-6">
+                      {pair.map((article, index) => (
+                        <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 bg-background/50 backdrop-blur-sm overflow-hidden flex flex-col min-h-[280px]">
+                          <CardHeader className="flex-1 p-5">
+                            <div className="flex items-center justify-between mb-3 text-[10px] text-muted-foreground uppercase tracking-wider font-bold">
+                              <span>{article.readTime}</span>
+                              <span>{article.date}</span>
+                            </div>
+                            <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-2 mb-2 leading-tight">
+                              {article.title}
+                            </CardTitle>
+                            <CardDescription className="text-xs font-semibold text-foreground/80 my-2 line-clamp-1 italic">
+                              {article.subtitle}
+                            </CardDescription>
+                            <CardDescription className="text-[11px] line-clamp-3">
+                              {article.description}
+                            </CardDescription>
+                          </CardHeader>
+                          <CardContent className="p-5 pt-0 mt-auto">
+                            <div className="flex flex-wrap gap-1.5 mb-4">
+                              {article.tags.map((tag, i) => (
+                                <Badge key={i} variant="secondary" className="text-[9px] px-1.5 py-0 font-medium bg-muted/50 text-muted-foreground">
+                                  {tag}
+                                </Badge>
+                              ))}
+                            </div>
+                            <Button variant="outline" size="sm" className="w-full text-[10px] font-bold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all h-8" asChild>
+                              <a href={article.url} target="_blank" rel="noopener noreferrer">Read Article</a>
+                            </Button>
+                          </CardContent>
+                        </Card>
+                      ))}
+                      {pair.length === 1 && <div className="min-h-[280px]" />}
+                    </div>
                   </div>
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all" asChild>
-                    <a href={article.url} target="_blank" rel="noopener noreferrer">Read Article</a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => pubEmblaApi && pubEmblaApi.scrollPrev()}
+              disabled={!pubPrevBtnEnabled}
+              className="absolute -left-2 sm:-left-6 top-1/2 -translate-y-1/2 rounded-full h-10 w-10 bg-background/80 backdrop-blur-md shadow-lg border-primary/20 hover:border-primary/50 text-primary transition-all z-10 hidden sm:flex disabled:opacity-30"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => pubEmblaApi && pubEmblaApi.scrollNext()}
+              disabled={!pubNextBtnEnabled}
+              className="absolute -right-2 sm:-right-6 top-1/2 -translate-y-1/2 rounded-full h-10 w-10 bg-background/80 backdrop-blur-md shadow-lg border-primary/20 hover:border-primary/50 text-primary transition-all z-10 hidden sm:flex disabled:opacity-30"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+
+            <div className="flex justify-center gap-1.5 mt-8">
+              {pairedArticles.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => pubEmblaApi?.scrollTo(i)}
+                  className={`h-1 rounded-full transition-all duration-300 ${pubSelectedIndex === i ? 'w-8 bg-primary' : 'w-2 bg-primary/20 hover:bg-primary/40'
+                    }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="scroll-mt-24 text-center">
-          <h3 className="text-2xl font-bold mb-8 flex items-center justify-center gap-2">
-            <TrendingUp className="h-6 w-6 text-orange-500" />
+          <h3 className="text-2xl font-bold mb-8 flex items-center justify-center gap-3">
+            <TrendingUp className="h-8 w-8 text-orange-500" />
             StackOverflow Contributions
           </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
