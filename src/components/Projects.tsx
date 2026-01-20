@@ -413,7 +413,7 @@ const Projects = () => {
             <div className="p-2 rounded-lg bg-primary/10">
               <Github className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold">Open Source Projects</h2>
+            <h2 className="text-3xl font-bold">Open Source Projects</h2>
           </div>
 
           <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
