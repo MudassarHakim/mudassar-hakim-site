@@ -12,27 +12,43 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" />
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
 
-          {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
-            Mudassar Hakim
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in pt-20 sm:pt-0">
+
+          {/* Main Heading - SEO Optimized H1 */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+            Software Engineering Leader & Coach
           </h1>
 
-          {/* Subtitle */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground mb-6">
-            Software Engineering Leader
+          {/* Subtitle - Name and Credentials as H2 */}
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-muted-foreground mb-8">
+            Mudassar Hakim | 17+ Years at Amazon, Ernst & Young, Delhivery
           </h2>
 
-          {/* Description */}
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Dynamic and results-driven technology leader with over <span className="text-primary font-semibold">17 years</span> of 
-            full-stack engineering experience, including impactful roles at <span className="text-primary font-semibold">Amazon, Ernst & Young, Delhivery, and Western Union</span>. 
-            Proven track record of architecting complex, scalable technical products, leading high-performing cross-functional teams, 
-            and delivering digital transformation initiatives in agile, fast-paced environments. Adept at bridging business and 
-            technology, driving innovation, and consistently achieving strategic objectives across global organizations.
+          {/* Coaching Narrative - Value Proposition */}
+          <div className="space-y-6 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+              I work with engineers who are technically strong but struggle to explain their thinking clearly —
+              especially in interviews, design discussions, and leadership moments.
+            </p>
+
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+              My focus is on breaking down complex systems and AI into simple structures that are easy to
+              understand, explain, and reason about. I use whiteboards, mental models, and clear narratives
+              to help engineers think calmly under pressure and communicate with confidence.
+            </p>
+
+            <p className="text-lg sm:text-xl text-primary font-semibold leading-relaxed">
+              The goal isn't to sound smarter. It's to think clearly, explain simply, and lead better.
+            </p>
+          </div>
+
+          {/* Professional Background */}
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Dynamic and results-driven technology leader with proven track record of architecting complex,
+            scalable technical products, leading high-performing cross-functional teams, and delivering
+            digital transformation initiatives in agile, fast-paced environments.
           </p>
 
           {/* Key Highlights */}

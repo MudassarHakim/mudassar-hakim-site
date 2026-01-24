@@ -42,8 +42,10 @@ const Skills = () => {
       icon: Brain,
       title: "AI/ML & Data",
       skills: [
+        { name: "RAG (Retrieval-Augmented Generation)", level: 90 },
+        { name: "LLM Integration", level: 88 },
+        { name: "Agentic AI", level: 85 },
         { name: "Machine Learning", level: 80 },
-        { name: "TensorFlow", level: 75 },
         { name: "Gen AI/GPT Integration", level: 85 },
         { name: "Big Data (Spark/Hadoop)", level: 80 },
         { name: "Data Engineering", level: 82 }
@@ -93,7 +95,7 @@ const Skills = () => {
               Skills & Expertise
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A comprehensive technology stack combined with leadership capabilities to drive 
+              A comprehensive technology stack combined with leadership capabilities to drive
               innovation and deliver exceptional results.
             </p>
           </div>
@@ -153,7 +155,7 @@ const Skills = () => {
             <h3 className="text-2xl font-bold text-center mb-8 text-foreground">Additional Technologies</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                'Redis', 'Kafka', 'Elasticsearch', 'GraphQL', 'OAuth2', 'Istio', 
+                'Redis', 'Kafka', 'Elasticsearch', 'GraphQL', 'OAuth2', 'Istio',
                 'Snowflake', 'ScyllaDB', 'Cassandra', 'ActiveMQ', 'Apache Camel',
                 'Jasmine', 'Karma', 'Mockito', 'JUnit', 'Sonar', 'Maven',
                 'Hibernate', 'Spring Security', 'Microservices', 'Event Sourcing',
