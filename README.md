@@ -1,76 +1,53 @@
-# Welcome to your Lovable project
+# Mudassar Hakim | Software Engineering Leader & Coach
 
-## Project info
+A professional personal website and portfolio showcasing the journey, skills, and publications of Mudassar Hakim, a Software Engineering Leader with 17+ years of experience at Amazon, Ernst & Young, and Delhivery.
 
-**URL**: https://lovable.dev/projects/0159ecf3-6a63-44c4-8c28-d4bfe15e1a86
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern Tech Stack**: Built with React, Vite, and TypeScript for a fast, type-safe development experience.
+- **Sleek UI/UX**: Utilizing shadcn/ui and Tailwind CSS for a premium, responsive design.
+- **Dynamic Content**: Highlights experience, technical publications, and open-source contributions.
+- **SEO Optimized**: Includes meta tags for search engines and social media sharing.
+- **CI/CD Integrated**: Automated deployments to GitHub Pages via GitHub Actions.
 
-There are several ways of editing your application.
+## 🛠️ Industry Standards & Best Practices
 
-**Use Lovable**
+This project adheres to modern software engineering standards to ensure maintainability, performance, and a great user experience:
 
-Simply visit the 
-- [Live site](https://mudassar-hakim-site.lovable.app/)
-- [Lovable Project](https://lovable.dev/projects/0159ecf3-6a63-44c4-8c28-d4bfe15e1a86) and start prompting.
+- **Clean Code & Architecture**: Component-based architecture with clear separation of concerns using React and TypeScript.
+- **Responsive Design**: Mobile-first approach ensuring a seamless experience across all devices and screen sizes.
+- **Accessibility (A11y)**: Semantic HTML and ARIA labels for better screen reader support.
+- **Performance Optimization**: Optimized asset loading, code splitting, and minimal bundle sizes via Vite.
+- **Type Safety**: Full TypeScript integration to catch errors early and improve developer productivity.
+- **Standardized Styling**: Design system approach using utility-first CSS (Tailwind) and reusable components (shadcn/ui).
 
+## 💻 Local Development
 
-Changes made via Lovable will be committed automatically to this repo.
+To run this project locally, ensure you have [Node.js](https://nodejs.org/) installed.
 
-**Use your preferred IDE**
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/MudassarHakim/mudassar-hakim-site.git
+   cd mudassar-hakim-site
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. **Install dependencies**:
+   ```sh
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Start the development server**:
+   ```sh
+   npm run dev
+   ```
 
-Follow these steps:
+## 🌐 Deployment
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+The site is automatically deployed to **GitHub Pages** whenever changes are pushed to the `main` branch. 
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Workflow**: The build and deploy process is handled by a [GitHub Actions workflow](.github/workflows/deploy.yml).
+- **Custom Domain**: Configured via the `CNAME` file in the `public` directory.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📜 License
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0159ecf3-6a63-44c4-8c28-d4bfe15e1a86) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is for personal use and portfolio representation.
