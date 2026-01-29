@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback, useEffect } from 'react';
-import { ExternalLink, Github, FileText, Brain, TrendingUp, MessageSquare, Filter, ChevronLeft, ChevronRight, Layout, Layers, Cpu, Database } from 'lucide-react';
+import { ExternalLink, Github, FileText, Brain, TrendingUp, MessageSquare, Filter, ChevronLeft, ChevronRight, Layout, Layers, Cpu, Database, Play } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -246,6 +246,65 @@ const Projects = () => {
     }
   ];
 
+  const liveApplications = [
+    {
+      title: "RAG QA Project",
+      description: "An intelligent Retrieval-Augmented Generation (RAG) question-answering system that combines document retrieval with AI-powered responses for accurate and context-aware answers.",
+      tech: ["RAG", "LLM", "Vector Database", "RAGAS", "Qdrant", "LangSmith", "NLP"],
+      link: "https://rag-qa-project-t7pa.onrender.com/",
+      isFeatured: true,
+      views: "20 views"
+    },
+    {
+      title: "Multi-Agent AI System",
+      description: "A sophisticated multi-agent AI system built with LangChain, Groq, and CrewAI for collaborative problem-solving and intelligent task orchestration across multiple specialized agents.",
+      tech: ["LangChain", "Groq", "CrewAI", "Multi-Agent AI", "Python"],
+      link: "https://multi-agent-langchain-groq-crewai-mudassar.lovable.app/",
+      isFeatured: true,
+      views: "15 views"
+    },
+    {
+      title: "PayFlow Unified Kit",
+      description: "A comprehensive payment processing solution that unifies multiple payment methods and providers into a single, streamlined interface for seamless transaction management.",
+      tech: ["Payment Processing", "API Integration", "React", "TypeScript"],
+      link: "https://payflow-unified-kit-mudassar-hakim.netlify.app/",
+      isFeatured: false,
+      views: "12 views"
+    },
+    {
+      title: "Ecommerce Fashion brand",
+      description: "A premium fashion e-commerce platform featuring a modern design, seamless shopping experience, and interactive product showcases.",
+      tech: ["React", "Tailwind CSS", "E-commerce", "Frontend"],
+      link: "https://arwa-lumiere.lovable.app/",
+      isFeatured: false,
+      views: "18 views"
+    },
+    {
+      title: "STAR Answer Formatter & Evaluator",
+      description: "An AI-powered tool that helps professionals format and evaluate behavioral interview answers using the STAR (Situation, Task, Action, Result) method.",
+      tech: ["Streamlit", "NLP", "GPT Integration", "Python"],
+      link: "https://behavioral-interview-answer-mudasarhakim.streamlit.app/",
+      isFeatured: false,
+      views: "9 views"
+    },
+    {
+      title: "Gemini ATS Resume Optimizer",
+      description: "Resume optimization tool powered by Google's Gemini AI to improve ATS (Applicant Tracking System) compatibility and increase job application success rates.",
+      tech: ["Streamlit", "Gemini AI", "Resume Analysis", "Python"],
+      link: "https://resume-markdown-formatter-mudasar-hakim.streamlit.app/",
+      isFeatured: false,
+      views: "7 views"
+    },
+    {
+      title: "CalmBot+",
+      description: "A mental wellness chatbot designed to provide emotional support and relaxation techniques using AI-powered conversational interfaces.",
+      tech: ["Streamlit", "AI Chatbot", "Mental Health", "Python"],
+      link: "https://calmbot-app.streamlit.app/",
+      isFeatured: false,
+      views: "4 views"
+    }
+  ];
+
   const mediumArticles = [
     {
       title: "Mastering Prompt Engineering",
@@ -408,6 +467,56 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Live Applications Section */}
+        <div id="applications" className="mb-24 scroll-mt-24">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="p-2 rounded-lg bg-primary/10">
+              <Play className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="text-3xl font-bold">Live Applications</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {liveApplications.map((app, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-500 border-border/50 bg-background/50 backdrop-blur-sm flex flex-col h-full">
+                <CardHeader className="p-6 pb-4">
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                        {app.title}
+                      </CardTitle>
+                      {app.isFeatured && (
+                        <Badge variant="default" className="bg-primary/90 text-[10px] px-2 py-0 h-5">Featured</Badge>
+                      )}
+                    </div>
+                    <span className="text-[10px] text-muted-foreground whitespace-nowrap">{app.views}</span>
+                  </div>
+                  <CardDescription className="text-sm leading-relaxed min-h-[80px]">
+                    {app.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {app.tech.map((t, i) => (
+                        <Badge key={i} variant="secondary" className="text-[10px] bg-muted/50 hover:bg-muted font-medium">
+                          {t}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300" asChild>
+                    <a href={app.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                      <ExternalLink className="h-4 w-4" />
+                      Try Live Demo
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded-lg bg-primary/10">
