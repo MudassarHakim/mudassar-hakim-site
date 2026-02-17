@@ -10,8 +10,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "mudassar.hakim.jobs@gmail.com",
-      href: "mailto:mudassar.hakim.jobs@gmail.com"
+      value: "mudassar.hakim@gmail.com",
+      href: "mailto:mudassar.hakim@gmail.com"
     },
     {
       icon: Phone,
@@ -138,7 +138,7 @@ const Contact = () => {
                   Book a time that works for you. Let's discuss engineering leadership opportunities, 
                   consulting projects, or innovative technology collaborations.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-row gap-3">
                   <Button
                     size="lg"
                     className="flex-1 shadow-elegant bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
@@ -219,7 +219,7 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                     <Button size="lg" asChild className="shadow-elegant">
-                      <a href="mailto:mudassar.hakim.jobs@gmail.com" className="gap-2">
+                      <a href="mailto:mudassar.hakim@gmail.com" className="gap-2">
                         <Mail className="h-4 w-4" />
                         Email Me
                       </a>
