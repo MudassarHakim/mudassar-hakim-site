@@ -295,7 +295,7 @@ function App() {
           <div className="bg-gradient-to-br from-slate-50 to-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
             <div className="p-3 sm:p-6">
               <img
-                src="/shared_image.jpeg"
+                src="/IIITBCertificate.jpeg"
                 alt="IIIT Bangalore Certificate"
                 className="w-full h-auto rounded-lg"
               />
